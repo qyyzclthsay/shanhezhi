@@ -1,0 +1,180 @@
+/* Keep the escape route visible; only dialog content scrolls. */
+body:has(dialog[open]){overflow:hidden}
+.main-dialog,.battle-dialog{overflow:hidden;max-height:calc(100dvh - 32px)}
+#dialog-content,#battle-content{display:flex;flex-direction:column;max-height:calc(100dvh - 36px);min-height:0}
+#dialog-content>.dialog-header,#dialog-content>.dialog-footer,
+#battle-content>.dialog-header,#battle-content>.battle-controls{flex:0 0 auto;position:relative;z-index:3}
+#dialog-content>.dialog-body,#battle-content>.formation-body,#battle-content>.battle-scroll-body{min-height:0;overflow-y:auto;overscroll-behavior:contain;scrollbar-gutter:stable}
+.dialog-header .icon-button{flex:none;min-width:36px;min-height:36px;position:relative;z-index:4}
+.dialog-footer{box-shadow:0 -3px 12px #473a2009}
+
+/* Officer artwork stays intact when a character is away on a mission. */
+.army-picker .officer-card.is-unavailable:disabled{background:#faf3e4!important;border:1px dashed #b8a17b!important;color:#735636!important;opacity:1!important;outline:0;box-shadow:none}
+.army-picker .officer-card.is-unavailable:disabled .portrait,
+.army-picker .officer-card.is-unavailable:disabled img{filter:none!important;opacity:1!important}
+.army-picker .officer-card.is-unavailable:disabled .portrait{background:#f4ead5}
+.army-picker .officer-card.is-unavailable:disabled .governor-badge{color:#fff4d9!important}
+.army-picker .dispatch-officer-busy{align-self:center;margin:7px 0 10px;padding:3px 10px;border-radius:3px;background:#e9dfc9;color:#775d3b;font-size:11px;line-height:1.6}
+.fixed-troop-picker .officer-card-body{min-height:0;padding:6px 7px 12px;width:100%;box-sizing:border-box}
+.fixed-troop-picker .officer-card:not(.is-unavailable){padding-bottom:18px}
+.fixed-troop-picker .officer-stats{gap:3px;margin:8px 0 4px}
+.fixed-troop-picker .officer-stats>span{white-space:nowrap;font-size:10px;letter-spacing:0}
+.fixed-troop-picker .officer-stats strong{font-size:12px}
+.fixed-troop-picker .officer-command{line-height:1.6;font-size:10px}
+.officer-position{font-size:10px;line-height:1.4;color:#8f6537}
+.officer-position[hidden]{display:none}
+.army-command-row{display:flex;align-items:center;justify-content:space-between;gap:12px;margin:16px 0}
+.army-command-row .field-label{display:flex;align-items:center;gap:9px;margin:0;min-width:0}
+.army-command-row select{width:auto;max-width:190px;margin:0}
+.army-command-row>span{font-size:11px;color:#8c7452}
+.army-size-shortcuts{display:flex;gap:16px}
+#army-plan-summary{display:flex;flex-wrap:wrap;gap:6px 12px}
+#army-plan-summary>span{white-space:nowrap}
+.people-search-section{margin-top:18px;padding-top:15px}
+.people-search-section h3{margin:0 0 10px}
+.people-search-section .alliance-result{margin:0 0 12px}
+.people-search-section .people-search>p{font-size:12px;margin:0 0 10px}
+.people-recruitment>.empty-note{padding:14px;margin:12px 0}
+
+/* Tiny corner marks, distinct from class labels and clear of the face. */
+.tk-portrait-frame>.ruler-badge[role="img"]{width:12px;height:12px;left:0;top:0;background:#f3c316;border:0;border-radius:0;clip-path:polygon(0 0,100% 0,0 100%);box-shadow:none;color:transparent}
+.tk-portrait-frame>.governor-badge{position:absolute;right:0;bottom:0;z-index:2;width:14px;height:14px;display:grid;place-items:center;background:#786247;color:#fff4d9;border:1px solid #f5ebd4;border-radius:2px;font:10px/1 serif;pointer-events:none}
+.resource-coin{--resource-accent:#d9bf7d}.resource-grain{--resource-accent:#afc59b}.resource-swords{--resource-accent:#d7a099}
+.resource:is(.resource-coin,.resource-grain,.resource-swords)>svg{display:block;width:21px;height:21px;flex:none;color:var(--resource-accent)}
+.resource:is(.resource-coin,.resource-grain,.resource-swords)>div>small{font-size:12px;font-weight:650;color:var(--resource-accent);letter-spacing:1px}
+.resource:is(.resource-coin,.resource-grain,.resource-swords) strong{font-weight:650}
+.siege-strength{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:8px 0 16px}
+.siege-strength>div{border:1px solid #d8c8a5;border-radius:6px;padding:14px;background:#f6ecd7}
+.siege-strength small{display:block;color:#8b7453}.siege-strength strong{display:block;margin-top:5px;font-size:24px;color:#59472d}
+.siege-officers{display:flex;flex-wrap:wrap;gap:12px;margin:20px 0}
+.siege-officers>span{width:70px;display:flex;align-items:center;flex-direction:column;gap:5px;font-size:13px}
+.siege-officers .tk-portrait-frame,.siege-officers .tk-portrait{width:64px;height:64px;max-width:64px}
+.siege-officers .troop-badge{font-size:11px}
+
+@media(max-width:600px){
+ .main-dialog{width:calc(100vw - 20px);max-width:calc(100vw - 20px);margin:auto;border-radius:10px}
+ .main-dialog .dialog-header{padding:12px 16px;align-items:center}
+ .main-dialog .dialog-header h2{font-size:22px;margin:3px 0 0}
+ .main-dialog .dialog-body{padding:14px 16px 18px;scrollbar-gutter:auto}
+ .main-dialog .dialog-footer{padding:10px 14px;gap:8px}
+ .main-dialog .dialog-footer button{min-height:40px}
+ .battle-dialog{max-height:100dvh}
+ #battle-content{max-height:calc(100dvh - 2px)}
+ .fixed-troop-picker{grid-template-columns:repeat(3,minmax(0,1fr));gap:9px}
+ .fixed-troop-picker .officer-card .portrait{height:auto;aspect-ratio:auto}
+ .fixed-troop-picker .officer-card .portrait-art{height:auto;aspect-ratio:1/1}
+ .fixed-troop-picker .officer-stats{display:grid;gap:1px;grid-template-columns:repeat(5,minmax(0,1fr));color:#806c4e}
+ .fixed-troop-picker .officer-stats>span{display:block;font-size:10px;text-align:center}
+ .fixed-troop-picker .officer-stats strong{display:block;font-size:12px;color:#5d4831}
+ .fixed-troop-picker .officer-command{font-size:10px}
+ .fixed-troop-picker .officer-card-body{padding:5px 4px 6px}
+ .fixed-troop-picker .officer-card h3{font-size:18px;letter-spacing:1px}
+ .fixed-troop-picker .officer-card .troop-badge{font-size:10px}
+ .army-command-row{gap:8px;margin:12px 0}
+ .army-command-row>span{max-width:110px;font-size:10px;text-align:right}
+ .army-command-row select{max-width:145px;font-size:12px}
+ .resources{gap:8px}
+ .resource:is(.resource-coin,.resource-grain,.resource-swords){gap:4px}
+ .resource:is(.resource-coin,.resource-grain,.resource-swords)>svg{width:15px;height:17px}
+ .resource:is(.resource-coin,.resource-grain,.resource-swords)>div>small{font-size:11px;letter-spacing:0}
+ .resource:is(.resource-coin,.resource-grain,.resource-swords) strong{font-size:14px}
+}
+@media(max-width:360px){.resource:is(.resource-coin,.resource-grain,.resource-swords)>svg{width:12px}.resources{gap:4px}.fixed-troop-picker{grid-template-columns:repeat(2,minmax(0,1fr))}}
+
+/* The game occupies the viewport; only its middle row scrolls. */
+body:not(.at-title){height:100vh;height:100dvh;overflow:hidden;padding:0}
+body:not(.at-title) .app-shell{position:fixed;inset:0;width:100%;height:100vh;height:100dvh;max-width:none;margin:0;display:grid;grid-template-rows:auto minmax(0,1fr) auto;overflow:hidden}
+.app-shell>.topbar{position:relative;z-index:30;height:auto;min-height:62px;flex-wrap:nowrap;gap:24px;padding:calc(8px + env(safe-area-inset-top,0px)) max(24px,env(safe-area-inset-right,0px)) 8px max(24px,env(safe-area-inset-left,0px));box-sizing:border-box}
+.app-shell>#game-main{min-height:0;min-width:0;width:100%;max-width:1700px;margin:0 auto;padding:12px max(20px,env(safe-area-inset-right,0px)) 20px max(20px,env(safe-area-inset-left,0px));overflow-y:auto;overflow-x:hidden;overscroll-behavior-y:contain;scrollbar-gutter:stable;box-sizing:border-box;outline:none}
+.app-shell>.command-dock{position:relative;inset:auto;z-index:25;min-height:68px;gap:24px;padding:10px max(24px,env(safe-area-inset-right,0px)) calc(19px + env(safe-area-inset-bottom,0px)) max(24px,env(safe-area-inset-left,0px));box-sizing:border-box;background:#fcf6e9}
+.topbar .resources{display:flex;order:initial;width:auto;flex:1;justify-content:center;gap:clamp(18px,4vw,72px);border:0;padding:0;min-width:0}
+.topbar .resource{min-width:0;gap:7px;white-space:nowrap}
+.topbar .resource>div{display:block;min-width:0}
+.topbar .resource>div>small{display:block;margin:0 0 2px;font-size:11px;letter-spacing:0}
+.topbar .resource strong{font-size:19px;line-height:1.2;letter-spacing:0;font-variant-numeric:tabular-nums}
+.topbar .resource.command-resource strong small{display:inline;font-size:12px}
+.topbar .resource>svg{width:18px;height:20px;flex:none}
+.topbar .header-tools{flex:none;margin-left:0}
+.topbar .header-tools>summary{min-height:38px;padding:8px 10px;box-sizing:border-box}
+.realm-nav{flex-wrap:nowrap;gap:12px;min-height:42px;padding:0 0 10px}
+.realm-buttons{display:flex;flex-wrap:wrap;gap:6px}
+.realm-buttons>button{min-height:38px;padding:8px 12px;font-size:12px;white-space:nowrap}
+.season-overview{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:stretch;gap:10px;margin:0 0 12px}
+.season-overview .season-strip{margin:0;min-height:0;padding:8px 12px;gap:7px 12px;flex-wrap:wrap;border-radius:7px}
+.season-overview .season-strip .season-current{font-size:12px}
+.season-overview .season-strip .season-remaining,.season-overview .season-effect{font-size:11px}
+.season-overview #leadership-status{margin:0;min-width:0}
+.season-overview .succession-strip{height:100%;box-sizing:border-box;border-radius:7px;padding:6px 10px;gap:8px}
+.season-overview:has(#leadership-status:not([data-status="normal"])){grid-template-columns:1fr}
+.season-overview [data-status="normal"] .succession-person small{display:none}
+.season-overview [data-status="normal"] .succession-person strong{font-size:16px}
+.season-overview .succession-strip>button{font-size:11px;padding:7px 9px}
+.diplomacy-summary{margin:0 0 10px;padding:0;border:0}
+.diplomacy-summary:not(:has([data-ally])){display:none}
+.diplomacy-summary>.diplomacy-entry,.diplomacy-summary>span,.diplomacy-summary>small{display:none}
+.command-dock .turn-description{min-width:115px;flex:none}
+.command-dock .turn-description strong{margin:0 0 4px;font-size:13px;white-space:nowrap}
+.command-dock .turn-description span{font-size:11px}
+.command-dock .next-step{flex:1;min-height:0;gap:12px}
+.command-dock .next-step strong{font-size:12px;font-weight:400;color:#887153}
+.command-dock .next-step.has-alert strong{font-weight:600;color:#9e4d36}
+.command-dock .next-step button{padding:7px 10px;font-size:12px}
+.command-dock .next-turn{min-height:42px;min-width:132px;padding:10px 16px;font-size:14px;white-space:nowrap}
+.command-dock .autosave{bottom:calc(3px + env(safe-area-inset-bottom,0px));right:max(24px,env(safe-area-inset-right,0px));font-size:9px}
+.command-dock .clock-options .world-clock{bottom:calc(100% + 14px);right:0;max-width:calc(100vw - 24px);box-sizing:border-box}
+#toast{top:calc(76px + env(safe-area-inset-top,0px));bottom:auto}
+.map-stage{height:clamp(330px,calc(100dvh - 250px),780px)!important}
+.map-expanded .map-stage{height:75dvh!important;min-height:420px!important}
+@media(max-width:1000px){
+ .app-shell>.topbar{gap:16px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+ .topbar .brand{min-width:105px}.topbar .brand strong{font-size:22px}
+ .topbar .resources{gap:clamp(12px,3vw,30px)}
+ .realm-nav{flex-wrap:wrap}.realm-buttons{margin-left:auto}
+ .app-shell>.command-dock{gap:15px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+ .command-dock .turn-description{min-width:100px}
+ .command-dock .next-turn{min-width:120px}
+}
+@media(max-width:680px){
+ .app-shell>.topbar{min-height:59px;gap:8px;padding:calc(7px + env(safe-area-inset-top,0px)) max(10px,env(safe-area-inset-right,0px)) 7px max(10px,env(safe-area-inset-left,0px))}
+ .topbar .brand{display:none}
+ .topbar .resources{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:7px;width:auto;flex:1;order:0}
+ .topbar .resource{display:block!important;position:relative}
+ .topbar .resource>svg{display:block!important;position:absolute;top:0;left:0;width:11px;height:12px}
+ .topbar .resource>div>small{font-size:10px;margin-bottom:3px;padding-left:14px}
+ .topbar .resource strong{font-size:clamp(12px,3.8vw,18px)}
+ .topbar .resource.command-resource strong{font-size:clamp(14px,4.3vw,19px)}
+ .topbar .resource.command-resource strong small{font-size:10px}
+ .topbar .header-tools>summary{padding:8px 7px;font-size:11px;min-height:36px}
+ .header-tools>summary:after{display:none}
+ .app-shell>#game-main{padding:10px max(10px,env(safe-area-inset-right,0px)) 16px max(10px,env(safe-area-inset-left,0px));scrollbar-gutter:auto}
+ .realm-nav{min-height:0;gap:0;padding:0 0 9px;margin:0}
+ .realm-buttons{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:5px;width:100%;margin:0}
+ .realm-buttons>button{display:flex;justify-content:center;align-items:center;min-height:36px;padding:6px 5px;font-size:12px;border:1px solid #d6c7aa;background:#fbf5e8}
+ .realm-buttons button svg{width:14px;height:14px}
+ .season-overview{gap:7px;margin-bottom:10px}
+ .season-overview .season-strip{padding:6px 8px;gap:4px 8px;align-content:center}
+ .season-overview .season-strip .season-current{font-size:11px}
+ .season-overview .season-strip .season-remaining,.season-overview .season-effect{font-size:10px}
+ .season-overview .season-strip>.map-text-button{margin-left:0;font-size:10px}
+ .season-overview .succession-strip{padding:6px;gap:5px;flex-wrap:wrap}
+ .season-overview [data-status="normal"] .succession-strip{flex-direction:column;justify-content:center;gap:4px}
+ .season-overview .succession-person{gap:6px}
+ .season-overview .succession-person .portrait{width:27px;height:32px}
+ .season-overview [data-status="normal"] .succession-person strong{font-size:14px}
+ .season-overview .succession-strip>button{padding:3px 7px;font-size:10px;margin-left:0;min-height:26px}
+ .map-stage{height:clamp(290px,46dvh,420px)!important}
+ .map-expanded .map-stage{height:70dvh!important;min-height:390px!important}
+ .app-shell>.command-dock{display:grid;grid-template-columns:minmax(0,1fr) auto auto;grid-template-areas:"hint hint hint" "date clock next";gap:4px 10px;min-height:0;padding:7px max(12px,env(safe-area-inset-right,0px)) calc(18px + env(safe-area-inset-bottom,0px)) max(12px,env(safe-area-inset-left,0px))}
+ .command-dock .turn-description{grid-area:date;min-width:0}
+ .command-dock .turn-description strong{font-size:11px;margin-bottom:2px}
+ .command-dock .turn-description span{font-size:10px}
+ .command-dock .next-step{grid-area:hint;flex-basis:auto;justify-content:space-between;min-height:16px;gap:8px}
+ .command-dock .next-step strong{font-size:11px;line-height:1.4}
+ .command-dock .next-step button{min-height:28px;padding:3px 8px;font-size:11px;margin:0}
+ .command-dock .clock-options{grid-area:clock}
+ .command-dock .clock-options>summary{font-size:10px}
+ .command-dock .clock-options .world-clock{right:-112px}
+ .command-dock .next-turn{grid-area:next;min-height:39px;min-width:110px;width:auto;padding:8px 10px;font-size:13px;gap:7px}
+ .command-dock .autosave{right:max(12px,env(safe-area-inset-right,0px));font-size:8px}
+ #toast{top:calc(65px + env(safe-area-inset-top,0px));padding:10px 14px;font-size:11px}
+}

@@ -1,0 +1,18 @@
+/* A disabled action must look inactive in every panel and native dialog. */
+button:disabled,
+button:disabled:hover,
+button:disabled:active {
+  background: #e0ded8 !important;
+  border-color: #c5c2ba !important;
+  color: #77736b !important;
+  box-shadow: none !important;
+  opacity: 1 !important;
+  transform: none !important;
+  cursor: not-allowed;
+  text-shadow: none;
+}
+button:disabled :is(small, strong, span, em) { color: inherit !important; }
+button:disabled img { filter: grayscale(.8); opacity: .7; }
+select:disabled, input:disabled { opacity: .6; cursor: not-allowed; }
+.city-quick-actions button small { line-height: 1.45; }
+.council-post button { min-width: 68px; }

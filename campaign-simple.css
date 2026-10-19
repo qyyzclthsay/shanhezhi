@@ -1,0 +1,43 @@
+/* Compact campaign controls; detailed forms remain available on demand. */
+.situation-banner[hidden],.army-rail[hidden],#army-cards[hidden],#report-count[hidden],#prisoner-count[hidden]{display:none!important}
+.situation-banner{padding:9px 14px;gap:12px;margin-bottom:10px;min-height:0}
+.situation-banner.quiet{background:transparent;border-color:transparent;padding:4px 2px;box-shadow:none}
+.situation-banner>div{gap:10px;min-width:0}
+.situation-banner>div>span:last-child{font-size:12px;line-height:1.55}
+.army-rail{padding:10px 12px}
+.army-rail .section-caption{margin-bottom:8px}
+.army-cards{gap:8px}
+.army-rail .march-card{min-width:200px;padding:10px 12px}
+.army-rail .march-card>span:not([class]){display:none}
+.army-rail .march-meter{margin:7px 0;height:3px}
+.season-strip{padding:8px 12px;gap:12px;margin-bottom:8px;min-height:0;border-radius:6px;box-shadow:none;flex-wrap:wrap}
+.season-current{font:18px var(--serif);color:var(--season);white-space:nowrap}
+.season-remaining{font-size:12px;color:#786c59;white-space:nowrap}
+.season-effect{flex:1;font-size:11px;color:#8b7a61}
+.season-strip .map-text-button{margin-left:auto;font-size:11px}
+.campaign-details{margin:16px 0 0;border-top:1px solid #d9ccb5;padding-top:13px}
+.campaign-details>summary{cursor:pointer;font-size:13px;font-weight:600;color:#756044;line-height:1.6;padding:3px 0}
+.campaign-details[open]>summary{margin-bottom:15px}
+.campaign-details .army-compose{margin-top:14px;gap:16px}
+.campaign-details .army-compose h3{font-size:14px;margin:0 0 12px}
+.campaign-details .officer-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
+.campaign-details .officer-card .portrait{height:92px}
+.campaign-details .officer-card h3{font-size:16px}
+.campaign-details .army-orders{font-size:11px;line-height:1.65}
+.compact-route{margin-bottom:18px;padding:13px 16px}
+.compact-route .route-city strong{font-size:25px}
+.dispatch-plan{padding:0 4px}
+.dispatch-plan>.field-label{display:flex;align-items:center;justify-content:space-between;font-size:14px}
+.dispatch-plan>.field-label strong{font-size:24px;color:#7d4e32}
+.dispatch-plan>input[type=range]{width:100%;margin:14px 0;accent-color:#976749}
+.dispatch-plan .army-facts{margin:4px 0 12px;gap:10px}
+.dispatch-plan .army-facts strong{font-size:17px}
+.dispatch-summary{font-size:13px;line-height:1.7;margin:12px 0 6px;color:#62503b}
+.dispatch-assessment{font-size:11px;line-height:1.6;color:#8b7659;margin:0}
+.season-next{font-size:14px;color:#735738;margin:18px 0}
+.season-grid{gap:10px;margin:16px 0}
+.season-grid .season-rule{padding:12px}
+.season-grid .season-rule>span{font-size:26px;display:block;margin-bottom:6px}
+.season-grid .season-rule strong{margin-top:10px;line-height:1.7}
+#world-records .report-list,#world-records .full-logs{margin-top:14px}
+@media(max-width:680px){.season-strip{gap:7px 10px}.season-effect{display:none}.campaign-details .army-compose{grid-template-columns:1fr}.season-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.situation-banner{align-items:flex-start}.situation-banner>div{display:block}.situation-banner>div>span:last-child{display:block;margin-top:4px}.army-rail .march-card{min-width:180px}.dispatch-plan{padding:0}}

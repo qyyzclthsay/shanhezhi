@@ -1,0 +1,105 @@
+/* Seasonal decisions and resident portraits stay visible beside the map. */
+.city-simple-header{padding:20px 20px 16px}
+.city-simple-header .city-name{margin:10px 0 0;font-size:34px}
+.city-simple-body{padding:18px 18px 16px}
+.city-simple-facts{display:grid;grid-template-columns:1fr 1fr;gap:15px}
+.city-simple-facts>div,.city-officer-summary{display:flex;flex-direction:column;align-items:flex-start;gap:5px;min-width:0}
+.city-simple-facts span{font-size:11px;color:#8b765b}
+.city-simple-facts strong{color:#563e29;font-size:27px;font-weight:500;line-height:1.2}
+.city-simple-facts strong small{font-size:11px;color:#907b5e}
+.city-simple-facts>div>small,.city-officer-summary>small{font-size:10px;color:#947f62;line-height:1.5}
+.city-officer-summary{padding:0 0 0 15px;border:0;border-left:1px solid #e1d0b3;background:transparent;text-align:left;border-radius:0}
+.city-officer-summary:not(:disabled):hover strong{color:#a54f38}
+.city-management-status{font-size:11px;color:#896f4b;line-height:1.8;border-top:1px solid #e4d6bd;padding-top:13px;margin:16px 0}
+.city-quiet-note{color:#998367;font-size:10px;line-height:1.7;margin:9px 0 0}
+.city-main-actions{display:grid;gap:10px;margin-top:14px}
+.city-main-action{display:flex;align-items:center;gap:11px;text-align:left;width:100%;border:1px solid #d8c4a3;border-radius:8px;padding:13px 14px;background:#fff9ed;color:#775735;min-height:63px}
+.city-main-action:not(:disabled):hover{background:#f5e8d0;border-color:#bd9c6d}
+.city-main-action>svg{width:20px;height:20px;flex:none;color:#9a7950}
+.city-main-action>span{display:grid;gap:5px;flex:1}
+.city-main-action strong{font-size:14px;font-weight:600}
+.city-main-action small{font-size:10px;color:#9a8161;line-height:1.5}
+.city-main-action>b{font-size:20px;font-weight:400;color:#b39873}
+.city-action-reason{display:block;color:#9c6449!important;font-size:10px!important;line-height:1.7;margin:7px 0 0!important}
+.city-march-action{border-top:1px solid #e2d1b4;padding-top:15px;margin-top:17px}
+.city-march-action>.primary-button,.city-enemy-march{display:flex;justify-content:center;align-items:center;gap:8px;width:100%;font-size:14px;padding:12px}
+.city-march-action>.primary-button svg{width:17px;height:17px}
+.city-march-action>p{text-align:center}
+.city-simple-body .city-project{padding:11px;margin:13px 0}
+.city-simple-body .city-project .training-line strong{font-size:11px}
+.city-simple-body .city-project .training-line small{font-size:10px}
+.city-simple-body .city-project .training-line button{font-size:9px;padding:6px;flex:none}
+.city-simple-body .city-project .counter-note{font-size:9px}
+.city-enemy-source{margin:15px 0;display:block}
+.city-enemy-source select{display:block;width:100%;margin-top:8px}
+.city-council-simple{display:grid;gap:12px}
+.city-management-start{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:center;gap:4px 15px;padding:12px 15px;background:#f3e7d0;border:1px solid #dcc49e;border-radius:9px}
+.city-management-start>div{grid-row:1/3}
+.city-management-start h3{font:600 18px var(--serif);color:#6b482e;margin:0 0 6px}
+.city-management-start p{font-size:11px;line-height:1.7;color:#90744f;margin:0}
+.city-management-start>.primary-button{padding:10px 15px;font-size:12px}
+.city-management-start>small{display:block;grid-column:2;font-size:9px;color:#9b805a;margin:0;line-height:1.6;max-width:180px}
+.city-management-start>p{grid-column:1/-1;margin-top:8px}
+.city-income-summary{display:flex;gap:5px 20px;align-items:baseline;flex-wrap:wrap;font-size:11px;color:#8a7151;padding:0 2px}
+.city-income-summary strong{color:#7f5730;font-size:17px;font-weight:500;margin-left:6px}
+.city-income-summary>small{font-size:9px;color:#a28b6e}
+.city-council-simple>.city-project{margin:0}
+.city-building-section>h3{font-size:13px;color:#795939;margin:0 0 4px}
+.city-building-section>p{font-size:10px;color:#9c8260;margin:0 0 9px;line-height:1.6}
+.city-building-options{display:grid;gap:7px}
+.city-building-option{display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:63px;box-sizing:border-box;padding:10px 13px;border:1px solid #e0cfb1;border-radius:7px;background:#fff9ed}
+.city-building-option strong{font-size:12px;color:#725335;font-weight:600}
+.city-building-option strong small{font-weight:400;font-size:10px;color:#ac9472;margin-left:6px}
+.city-building-option p{font-size:10px;color:#9c8461;margin:5px 0 0;line-height:1.6}
+.city-building-option span{font-size:10px;color:#8c6b41}
+.city-building-option button{font-size:11px;padding:8px 13px;flex:none}
+.city-advanced{border-top:1px solid #dfceb0;padding-top:10px}
+.city-advanced>summary{font-size:12px;font-weight:500;color:#806142;cursor:pointer;line-height:1.8;padding:2px 0}
+.city-advanced>summary small{font-size:10px;font-weight:400;color:#a18b6b;margin-left:9px}
+.city-advanced-content{padding-top:15px}
+.city-advanced-content>.income-note{margin-top:0;margin-bottom:13px}
+.city-advanced-content .job-row{margin-bottom:10px}
+.city-secondary-options{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:11px}
+.city-secondary-options button{font-size:11px;width:100%;padding:10px 6px}
+.city-secondary-options p{font-size:10px;line-height:1.7;color:#9c805d;margin:7px 0 0}
+.city-army-summary{display:flex;flex-wrap:wrap;gap:8px 17px;font-size:11px;color:#9a7f5b;margin-bottom:15px;line-height:1.7}
+.city-army-summary strong{font-weight:500;color:#7d5c36}
+@media(max-width:680px){.city-simple-header{display:block;padding:16px}.city-simple-header .city-overline{justify-content:space-between;margin:0}.city-simple-header .city-overline>span:first-child{display:block}.city-simple-header .city-name{margin-top:8px;font-size:30px}.city-simple-body{padding:16px}.city-main-actions{grid-template-columns:1fr 1fr;align-items:start}.city-main-action{padding:12px 10px;gap:8px}.city-main-action>svg{display:none}.city-march-action{margin-top:15px}.city-management-start{padding:16px}.city-advanced>summary small{display:block;margin-left:15px}.city-secondary-options{gap:8px}.city-secondary-options button{font-size:10px}}
+@media(max-width:380px){.city-main-actions{grid-template-columns:1fr}.city-secondary-options{grid-template-columns:1fr}.city-secondary-options>div{display:grid;grid-template-columns:100px 1fr;gap:10px}.city-secondary-options p{margin:0}}
+@media(max-width:540px){.city-management-start{display:block;padding:13px 14px}.city-management-start>.primary-button{margin-top:12px}.city-management-start>small{max-width:none;margin-top:6px}.city-building-option{align-items:flex-start}.city-building-option p span{display:block}.city-income-summary{gap:5px 15px}.city-income-summary>small{width:100%}}
+
+/* Direct seasonal controls */
+.city-simple-header{padding:15px 17px 12px}.city-simple-header .city-name{font-size:29px;margin:7px 0 0}.city-simple-body{padding:13px 15px}.city-simple-facts{gap:9px}.city-simple-facts strong{font-size:23px}.city-simple-facts>div>small{font-size:9px}.city-management-inline{margin:12px 0 10px;padding:10px;background:#eee5cf;border-left:3px solid #9c8654;border-radius:3px}.city-management-inline .city-management-status{font-size:11px;margin:0 0 7px;line-height:1.6}.city-management-inline .secondary-button{font-size:10px;padding:5px 9px;min-height:28px}.city-quick-actions{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px}.city-quick-actions>button{padding:9px 3px;background:#fcf6e8;border:1px solid #d6c6a7;border-radius:4px;font:12px 'Microsoft YaHei',sans-serif;color:#634d35;min-height:47px}.city-quick-actions>button:hover:not(:disabled){background:#e8dcc1;border-color:#a68958}.city-quick-actions>button:disabled{opacity:.45;cursor:not-allowed}.city-quick-actions small{display:block;font-size:9px;color:#988064;margin-top:4px}.city-march-action{margin-top:10px;padding-top:0;border:0}.city-march-action>.primary-button{min-height:38px;padding:9px}.city-march-action p{font-size:10px;margin:5px 0}.city-visible-roster{border-top:1px solid #decdb0;margin-top:12px;padding-top:10px}.city-visible-roster h3{font-size:12px;margin:0 0 9px;color:#6b563d;display:flex;justify-content:space-between}.city-visible-roster h3 span{font-size:10px;font-weight:400;color:#938065}.city-portrait-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:6px}.city-portrait-grid>button{display:flex;align-items:center;gap:7px;text-align:left;border:1px solid #ddd0b8;border-radius:4px;background:#faf3e4;min-width:0;padding:7px 6px;min-height:65px}.city-portrait-grid .portrait{width:37px;height:46px;min-width:37px;flex-shrink:0;border-radius:3px;margin:0}.city-portrait-grid .portrait svg{width:100%;height:100%;display:block}.city-portrait-grid>button>span{min-width:0}.city-portrait-grid strong{display:block;color:#4f594b;font-size:12px;font-weight:500}.city-portrait-grid small{display:block;font-size:8px;color:#8b7358;white-space:nowrap;margin-top:4px}.city-portrait-grid em{display:block;font-size:8px;font-style:normal;color:#a58b61;margin-top:4px}.city-portrait-grid>button:hover{border-color:#a78752;background:#eee2c7}.council-post{display:flex;gap:12px;align-items:end;padding:12px 0;border-bottom:1px solid #e0d1b7}.council-post label{flex:1;margin:0}.council-post select{width:100%;margin-top:5px}.council-post button{flex-shrink:0;min-width:65px}.city-council-simple .city-management-start{padding:12px}.city-council-simple .city-management-start h3{font-size:15px}.city-council-simple .city-management-start p{font-size:12px;line-height:1.8}.city-council-simple .city-management-start .primary-button{margin-top:8px}
+/* Keep the people and common orders above the desktop fold. */
+.city-simple-header{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:10px 15px}.city-simple-header .city-name{order:-1;font-size:25px;margin:0}.city-simple-header .city-overline{margin:0}.city-simple-header .city-overline>span:first-child{display:none}.city-simple-body{padding:10px 12px}.city-simple-facts{gap:8px}.city-simple-facts>div{gap:3px}.city-simple-facts strong{font-size:21px}.city-simple-facts>div>small{font-size:10px}.city-visible-roster{padding-top:7px;margin-top:8px}.city-visible-roster h3{margin-bottom:6px}.city-portrait-grid{grid-template-columns:repeat(4,minmax(0,1fr));gap:4px}.city-portrait-grid>button{display:flex;flex-direction:column;justify-content:start;gap:4px;text-align:center;padding:5px 2px;min-height:0}.city-portrait-grid .portrait{width:34px;height:41px;min-width:34px}.city-portrait-grid strong{font-size:12px}.city-portrait-grid small{font-size:9px;margin-top:3px}.city-portrait-grid em{font-size:10px;margin-top:2px}.city-management-inline{display:flex;align-items:center;justify-content:space-between;gap:8px;margin:8px 0;padding:5px 7px}.city-management-inline .city-management-status{border:0;padding:0;margin:0;font-size:10px;line-height:1.4}.city-management-inline .secondary-button{white-space:nowrap;padding:4px 6px;min-height:26px}.city-quick-actions>button{min-height:39px;padding:6px 3px}.city-quick-actions small{font-size:10px;margin-top:2px}.city-march-action{margin-top:7px}.city-march-action>.primary-button{min-height:34px;padding:6px}.city-march-action .city-quiet-note{display:none}.city-portrait-grid>p{grid-column:1/-1}
+@media(min-width:1001px){.game-layout{grid-template-columns:minmax(0,1fr) 340px}}
+@media(max-width:1000px) and (min-width:681px){.city-portrait-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:680px){.city-simple-header{display:flex}.city-simple-body{padding:12px}.city-portrait-grid .portrait{width:42px;height:51px}.city-portrait-grid small{font-size:10px}.city-quick-actions>button{min-height:45px}.city-management-inline .city-management-status{font-size:11px}}
+.city-portrait-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.city-portrait-grid>button{flex-direction:row;text-align:left;align-items:center;padding:5px 6px;gap:7px;min-height:54px}.city-portrait-grid small{font-size:10px;margin-top:2px}.city-portrait-grid em{font-size:10px}.city-portrait-grid .portrait{width:35px;height:43px;min-width:35px}
+@media(max-width:680px){.city-portrait-grid>button{min-height:63px}.city-portrait-grid .portrait{width:43px;height:52px}}
+.city-march-action p:empty{display:none}
+
+/* Keep common military decisions together and administration optional. */
+.city-primary-actions{margin:14px 0 8px;grid-template-columns:repeat(3,minmax(0,1fr));gap:7px}
+.city-primary-actions>button{min-height:57px;padding:10px 4px;font-size:15px;font-weight:600}
+.city-primary-actions>button small{font-size:10px;font-weight:400;margin-top:5px;line-height:1.4}
+.city-primary-actions>button.primary-button{display:block;background:#934c3b;border-color:#934c3b;color:#fff6e6}
+.city-primary-actions>button.primary-button small{color:#f0d4bc}
+.city-primary-actions>button.primary-button:hover:not(:disabled){background:#7e3e30;border-color:#7e3e30}
+.city-utility-actions{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px;margin-bottom:13px}
+.city-utility-actions>button{min-width:0;min-height:43px;padding:6px 3px;color:#80694c;background:transparent;border:1px solid #e0d2bb;border-radius:4px;font-size:12px}
+.city-utility-actions>button:hover:not(:disabled){background:#f1e6d2;border-color:#b79b70}
+.city-utility-actions>button small{display:block;font-size:10px;line-height:1.4;color:#9b8263;margin-top:3px}
+.city-utility-actions>button:disabled{opacity:.5;cursor:not-allowed}
+.city-income-note{font-size:10px;color:#967d5c;line-height:1.6;margin:12px 0 0}
+.city-council-simple .city-management-start{display:block;padding:12px 14px}
+.city-council-simple .city-management-start h3{margin:0 0 5px}
+.city-council-simple .city-management-start p{margin:0;font-size:12px;line-height:1.7}
+.city-council-simple .city-management-start button{margin-top:10px}
+@media(max-width:680px){
+ .city-primary-actions>button{min-height:58px;font-size:16px}
+ .city-utility-actions>button{min-height:44px;font-size:12px}
+ .city-portrait-grid{gap:7px}
+ .city-portrait-grid>button{padding:7px 8px}
+ .city-income-note{font-size:11px}
+}

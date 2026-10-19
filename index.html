@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#28313f">
+  <title>山河志 · 群雄割据</title>
+  <link rel="stylesheet" href="styles.css?v=cfcc19ce37a6">
+  <link rel="stylesheet" href="expansion.css?v=a03b96721901">
+  <link rel="stylesheet" href="campaign.css?v=5480f84ee457">
+  <link rel="stylesheet" href="theme.css?v=0222a778158b">
+  <link rel="stylesheet" href="simple-ui.css?v=c37881d02f3b">
+  <link rel="stylesheet" href="city-simple.css?v=a4036232f72b">
+  <link rel="stylesheet" href="people-simple.css?v=af26c4c95993">
+  <link rel="stylesheet" href="campaign-simple.css?v=a9d54f57b3bd">
+  <link rel="stylesheet" href="start-screen.css?v=213ed7a7a1ff">
+  <link rel="stylesheet" href="succession.css?v=ef0102834b10">
+  <link rel="stylesheet" href="diplomacy.css?v=086fbe11a33d">
+  <link rel="stylesheet" href="portraits.css?v=cf68b1371fff">
+  <link rel="stylesheet" href="battle-cards.css?v=1c3d87356501"><link rel="stylesheet" href="troops.css?v=4e0e95aab781">
+  <link rel="stylesheet" href="controls.css?v=4f96b5a94caf">
+  <link rel="stylesheet" href="interface-v14.css?v=4cca2a2c751c">
+</head>
+<body class="at-title">
+  <svg class="svg-defs" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><defs>
+    <symbol id="i-city" viewBox="0 0 24 24"><path d="M3 21V9h5v4h8V9h5v12M2 21h20M8 9V4l4-2 4 2v5M10 21v-5h4v5M5 6v3M19 6v3"/></symbol>
+    <symbol id="i-coin" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M9 9h6v6H9z"/></symbol>
+    <symbol id="i-grain" viewBox="0 0 24 24"><path d="M8 22 16 2M12 13C5 14 4 9 5 6c5 0 8 2 7 7ZM14 8c0-4 3-6 7-5 0 5-3 7-7 5ZM10 18c-6 1-9-3-8-6 5-1 8 1 8 6ZM12 15c0-4 3-6 8-5-1 5-4 7-8 5"/></symbol>
+    <symbol id="i-swords" viewBox="0 0 24 24"><path d="m4 3 3 1 13 15-2 2L4 7 4 3ZM20 3l-3 1-5 6m-4 5-4 4 2 2 5-5M2 17l5 5M17 22l5-5"/></symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24"><path d="m12 2 9 4v6c0 5-9 10-9 10S3 17 3 12V6l9-4ZM12 7v10M8 12h8"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M4 12h16m-6-6 6 6-6 6"/></symbol>
+    <symbol id="i-leaf" viewBox="0 0 24 24"><path d="M5 19C-1 7 13 3 21 3c0 9-5 20-16 16ZM3 22 16 9"/></symbol>
+    <symbol id="i-person" viewBox="0 0 24 24"><circle cx="12" cy="7" r="4"/><path d="M4 22v-4a8 8 0 0 1 16 0v4M8 16l4 4 4-4"/></symbol>
+    <symbol id="i-save" viewBox="0 0 24 24"><path d="M4 3h13l4 4v14H3V3h1ZM7 3v6h10V3M7 21v-8h10v8"/></symbol>
+    <symbol id="i-help" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M9 8a3 3 0 0 1 6 0c0 2-3 2-3 5M12 16v1"/></symbol>
+    <symbol id="i-close" viewBox="0 0 24 24"><path d="m6 6 12 12M6 18 18 6"/></symbol>
+    <symbol id="i-flag" viewBox="0 0 24 24"><path d="M5 22V3c5-4 8 4 15 0v11c-7 4-10-4-15 0"/></symbol>
+    <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 1v3M12 20v3M1 12h3M20 12h3M4 4l2 2m12 12 2 2M4 20l2-2M18 6l2-2"/></symbol>
+  </defs></svg>
+  <section id="start-screen" aria-label="山河志主菜单"></section>
+  <div class="app-shell">
+    <header class="topbar">
+      <a class="brand" href="#" aria-label="山河志首页"><span class="brand-seal">山<br>河</span><span><strong>山河志</strong><small>三国 · 沙盘策略</small></span></a>
+      <div class="resources" id="resources" aria-live="polite"></div>
+      <details class="simple-menu header-tools"><summary>菜单</summary><div class="menu-panel"><button id="title-btn">返回主菜单</button><button id="settings-btn">设置</button><button id="help-btn">游戏说明</button><button id="save-btn">保存与导入</button><button id="new-btn">开始新游戏</button></div></details>
+    </header>
+    <main id="game-main" tabindex="-1" aria-label="天下沙盘与城池事务">
+      <nav class="realm-nav" aria-label="势力事务"><div class="realm-identity" id="realm-identity"></div><div class="realm-buttons"><button id="citylist-btn"><svg><use href="#i-city"/></svg>城池</button><button id="officers-btn"><svg><use href="#i-person"/></svg>将府 <span id="officer-count"></span></button><button id="talents-btn">人才</button><button id="prisoners-btn">俘虏 <span id="prisoner-count"></span></button><button id="reports-btn"><svg><use href="#i-flag"/></svg>军报 <span id="report-count"></span></button><button id="diplomacy-btn">结盟·关系</button></div></nav>
+      <div class="season-overview"><section id="season-strip" class="season-strip" aria-label="四季与节气"></section><section id="leadership-status" class="leadership-status" aria-label="君主与传承" aria-live="polite"></section></div><div id="diplomacy-summary" class="diplomacy-summary" aria-label="盟约"></div>
+      <section id="situation-banner" class="situation-banner" aria-live="polite"></section>
+      <div class="game-layout">
+        <section class="map-card" aria-label="天下沙盘">
+          <div class="map-topline"><div class="map-title"><svg><use href="#i-flag"/></svg><strong>天下地图</strong><span id="map-count"></span></div><div class="map-actions"><button id="map-expand" class="map-text-button" aria-pressed="false">放大查看</button><span class="live-indicator" id="world-status">天下暂歇</span></div></div>
+          <div class="map-stage"><canvas id="world-map" aria-label="三国城池地图，可点击城池查看详情"></canvas><div class="map-hint" id="map-hint"></div><details class="legend-drawer"><summary>势力颜色</summary><div class="map-legend" id="map-legend"></div></details><div class="map-zoom"><button id="zoom-in" aria-label="放大地图" title="放大地图">＋</button><button id="zoom-out" aria-label="缩小地图" title="缩小地图">−</button><button id="zoom-reset" aria-label="重置地图视角" title="重置视角">⌖</button></div><div class="world-alert" id="world-alert" hidden></div></div>
+          <div class="map-bottomline"><span><i class="selection-dot"></i><span id="selection-tip">点击城池，调兵遣将</span></span><button class="map-text-button" id="home-btn">回到主城 <span>↗</span></button></div>
+          <section class="army-rail"><div class="section-caption"><span class="eyebrow">在途军队 <b id="army-count">0</b></span><button class="map-text-button" id="army-all">行军全览 ↗</button></div><div id="army-cards" class="army-cards"></div></section>
+        </section>
+        <aside class="sidebar"><div id="city-panel" class="city-panel"></div></aside>
+      </div>
+    </main>
+    <footer class="command-dock" aria-label="时间与下一步"><div class="turn-description"><strong id="actions-label"></strong><span id="turn-income"></span></div><div class="next-step" id="next-step" aria-live="polite"></div><details class="clock-options"><summary>逐日观察</summary><div class="world-clock"><button id="clock-toggle" aria-label="运行天下">▶ 运行天下</button><button id="clock-speed" aria-label="调整天下流转速度">1×</button><span id="clock-label">已暂停 · 可随时下令</span><div class="clock-track"><i id="clock-progress"></i></div></div></details><button class="primary-button next-turn" id="end-turn">推进一季 <svg><use href="#i-arrow"/></svg></button><span class="autosave" id="autosave">进度自动保存在本机</span></footer>
+  </div>
+  <div id="toast" role="status" aria-live="polite"></div>
+  <dialog id="main-dialog" class="main-dialog"><div id="dialog-content"></div></dialog>
+  <dialog id="battle-dialog" class="battle-dialog"><div id="battle-content"></div></dialog>
+  <input type="file" id="load-input" accept="application/json,.json" hidden>
+  <script src="calendar.js?v=a24821b63072"></script><script src="officer-ratings.js?v=bc4f467886ff"></script><script src="scenario.js?v=fba7484f1cdb"></script><script src="ui-assets.js?v=596eafde8f91"></script><script src="troop-assignments.js?v=05facc6a302c"></script><script src="troops.js?v=72b854112fa6"></script><script src="troop-combat.js?v=6997ded62593"></script><script src="engine.js?v=bdef5ddfa00b"></script><script src="portraits.js?v=f7f7a1517aec"></script><script src="map-layout.js?v=b8686ef66e84"></script><script src="map.js?v=4ca9add92d48"></script><script src="battle-cards.js?v=57c7a30e335d"></script><script src="people.js?v=e7569c8c9c72"></script><script src="city-panel.js?v=a7dcbf42a986"></script><script src="campaign-ui.js?v=21a22a0a2cb8"></script><script src="seasons-ui.js?v=ba4af6297568"></script><script src="start-screen.js?v=a9c37c32e964"></script><script src="succession-ui.js?v=30a977817416"></script><script src="diplomacy-ui.js?v=3c347e0ee803"></script><script src="app.js?v=5e0abfba7f57"></script>
+</body>
+</html>

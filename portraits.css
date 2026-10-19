@@ -1,0 +1,11 @@
+/* Preserve the supplied square composition, including hats and weapons. */
+img.tk-portrait{display:block;width:100%;height:100%;object-fit:contain;object-position:center;user-select:none}
+.portrait:has(>img.tk-portrait),.start-portrait:has(>img.tk-portrait){background:#f7f3e9}
+.tk-portrait-frame{display:block;position:relative;width:100%;height:100%;isolation:isolate}
+.ruler-badge{position:absolute;z-index:2;left:2px;top:2px;width:19px;height:19px;display:grid;place-items:center;color:#ffda76;background:#6b471b;border:1px solid #f2d083;border-radius:4px;box-shadow:0 1px 3px #33261755;pointer-events:none}
+.ruler-badge svg{display:block;width:15px;height:15px}
+.tk-common-portrait{display:flex;width:100%;height:100%;align-items:center;justify-content:center;flex-direction:column;background:#dedfd5;color:#435052;font-family:var(--serif,serif);gap:3px}
+.tk-common-portrait b{font-size:clamp(22px,3vw,46px);font-weight:400}.tk-common-portrait small{font-size:9px}.tk-common-portrait.common-civil{background:#e4dfcf;color:#695c40}
+.people-talent-card.is-named-talent{border-color:#bc9547;background:linear-gradient(135deg,#fff9e7,#f8eed8)}
+.talent-gold-mark{display:inline-flex;gap:5px;align-items:center;border:1px solid #b68b36;background:#f4df9e;color:#725113;padding:3px 7px;font-size:11px;font-weight:600;letter-spacing:1px;border-radius:3px}
+.talent-receipts .talent-named-receipt{border-left:3px solid #b58b33;background:#f7eac8;padding:9px;color:#715223}

@@ -1,0 +1,54 @@
+#leadership-status{margin:0 0 12px;color:#354952}
+.succession-strip{display:flex;align-items:center;gap:12px;padding:8px 12px;border:1px solid #d9dfd5;border-radius:8px;background:#f7f6ed}
+.succession-person{display:flex;align-items:center;gap:10px;min-width:0;flex-shrink:0}
+.succession-person .portrait{display:block;width:34px;height:41px;border-radius:4px;overflow:hidden}
+.succession-person small,.succession-person strong{display:block}
+.succession-person small{font-size:10px;color:#7e8980;line-height:1.5}
+.succession-person strong{font-family:var(--serif);font-size:17px;font-weight:500;white-space:nowrap}
+.succession-strip>button{margin-left:auto;flex-shrink:0;padding:7px 12px;font-size:11px}
+.succession-strip-note{font-size:11px;line-height:1.6;color:#6d786e}
+.succession-arrow{color:#a88b59;font-size:18px}
+[data-status="pending"] .succession-strip{border-color:#bea567;background:#f8f2df}
+.succession-seal{display:grid;place-items:center;width:34px;height:41px;border:1px solid #b7aa83;background:#efe8d5;color:#7f714e;font-family:var(--serif);font-size:20px;border-radius:4px}
+.succession-office{display:flex;gap:28px;flex-wrap:wrap;margin:12px 0 20px}
+.succession-office .portrait{width:58px;height:70px}
+.succession-office .succession-person strong{font-size:25px}
+.succession-description{font-size:14px;line-height:1.9;color:#4f6266}
+.succession-note{font-size:12px;line-height:1.8;color:#7c8574;margin:12px 0}
+.succession-candidates{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.main-dialog:has(.succession-selection){overflow:hidden}
+.main-dialog:has(.succession-selection) #dialog-content{display:flex;flex-direction:column;max-height:calc(90vh - 4px)}
+.main-dialog:has(.succession-selection) .dialog-header,.main-dialog:has(.succession-selection) .dialog-footer{flex-shrink:0}
+.main-dialog:has(.succession-selection) .dialog-body{overflow-y:auto;min-height:0;overscroll-behavior:contain}
+.main-dialog:has(.succession-selection) .succession-office{margin:0 0 10px}
+.main-dialog:has(.succession-selection) .succession-description{margin:8px 0}
+.succession-candidate{display:flex;align-items:center;gap:12px;padding:12px;border:1px solid #d5ddd2;border-radius:7px;background:#faf9f0;color:#354c54;text-align:left;min-width:0}
+.succession-candidate:hover{background:#eef2e8;border-color:#9dac9d}
+.succession-candidate.selected{border-color:#a88947;background:#f6efda;box-shadow:inset 0 0 0 1px #a88947}
+.succession-candidate:focus-visible{outline:2px solid #55717a;outline-offset:3px}
+.succession-candidate .portrait{display:block;width:60px;height:72px;flex:0 0 60px;border-radius:4px;overflow:hidden}
+.succession-candidate strong{font-family:var(--serif);font-size:22px;font-weight:500}
+.succession-candidate small{display:block;margin-top:10px;font-size:11px;white-space:nowrap;color:#677c71}
+.succession-candidate em{font-size:10px;font-style:normal;color:#987741;background:#eee4c4;padding:3px 5px;margin-left:7px;border-radius:3px}
+.succession-candidate>b{font-size:11px;font-weight:400;margin-left:auto;color:#7d8c7a}
+.succession-history{margin-top:24px;border-top:1px solid #dce1d3;padding-top:13px;font-size:12px;color:#798775}
+.succession-history summary{cursor:pointer;padding:3px 0}
+.succession-history summary:focus-visible{outline:2px solid #55717a;outline-offset:3px}
+.succession-history ol{padding:0;list-style:none}
+.succession-history li{padding:10px 0;border-bottom:1px solid #e4e7da}
+.succession-history li small{font-size:10px;color:#8e987f}
+.succession-history li p{margin:6px 0;font-size:12px;line-height:1.8;color:#53665d}
+.succession-celebration{text-align:center;padding:12px 0 22px;color:#405761}
+.succession-celebration>.portrait{display:block;width:108px;height:130px;margin:0 auto 18px;border-radius:8px;overflow:hidden;border:2px solid #c5b176}
+.succession-kicker{display:block;font-size:11px;letter-spacing:5px;color:#a08a4f}
+.succession-celebration h3{font-family:var(--serif);font-size:32px;letter-spacing:4px;margin:12px 0}
+.succession-celebration p,.succession-messages p{font-size:14px;line-height:1.9}
+.succession-celebration small{font-size:11px;line-height:1.8;color:#87927d}
+.succession-messages p{padding:12px 15px;border-left:3px solid #bca76f;background:#f4f2e6}
+@media(max-width:680px){
+  .succession-strip{flex-wrap:wrap;gap:9px;padding:9px 11px}
+  .succession-strip-note{order:2;flex-basis:100%}
+  .succession-strip>button{padding:7px 9px}
+  .succession-candidates{grid-template-columns:1fr}
+  .succession-office{gap:20px}
+}

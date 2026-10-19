@@ -1,0 +1,114 @@
+/* People screens: visible portraits and five stats, recruitment separate from records. */
+.people-panel { color: var(--ink); }
+.people-panel .dialog-toolbar { padding-bottom: 12px; }
+.people-panel .dialog-description { margin: 12px 0 16px; }
+.people-section-label { color: #34563e; font-size: 15px; font-weight: 600; }
+.people-list.officer-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+button.people-card {
+  display: grid;
+  grid-template-columns: 76px minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 14px;
+  padding: 10px 14px 10px 10px;
+  min-height: 96px;
+  box-shadow: none;
+  background: #f7f8ef;
+}
+.people-card .portrait { width: 76px; height: 91px; border-radius: 5px; }
+.people-card.legend { background: #f8f5e9; }
+.people-card-copy { display: block; min-width: 0; }
+.people-card-copy strong { display: block; font-family: var(--serif); font-size: 22px; font-weight: 500; letter-spacing: 2px; }
+.people-card-copy small { display: block; margin-top: 7px; font-size: 11px; line-height: 1.6; color: #7b896b; }
+.people-card-role { display: block; margin-top: 5px; font-size: 12px; color: #60734e; }
+.people-card-action { color: #607d4e; font-size: 11px; white-space: nowrap; }
+.people-card > .officer-stats { grid-column: 1 / -1; width: 100%; margin: 0; padding: 10px 0 0; border-top: 1px solid #dce3ce; }
+.people-card .officer-stats, .people-talent-card .officer-stats { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 6px; }
+.people-card .officer-stats span, .people-talent-card .officer-stats span { font-size: 11px; text-align: center; }
+.people-card .officer-stats strong, .people-talent-card .officer-stats strong { display: block; margin-top: 4px; font-size: 22px; line-height: 1.25; color: #344f3c; }
+.people-roster-tabs { flex-wrap: wrap; }
+.people-roster-filters { justify-content: flex-start; gap: 18px; }
+.people-talent-card { border: 1px solid #d4ddc9; border-radius: 8px; background: #f7f8ef; padding: 16px; overflow: hidden; }
+.people-talent-card.legend { background: #f8f5e9; border-color: #d8cbaa; }
+.people-talent-profile { display: grid; grid-template-columns: 92px minmax(0, 1fr); gap: 18px; align-items: center; }
+.people-talent-profile > .portrait { width: 92px; height: 111px; border-radius: 5px; }
+.people-talent-profile h3 { font-family: var(--serif); font-size: 28px; margin: 0 0 9px; letter-spacing: 2px; }
+.people-talent-profile p { margin: 0 0 8px; font-size: 13px; color: #60734e; }
+.people-talent-profile small { font-size: 12px; line-height: 1.6; color: #667657; }
+.people-talent-card .officer-stats { margin: 14px 0; padding: 12px 0; border-block: 1px solid #dce3ce; }
+.people-talent-actions { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+.people-talent-actions button { min-height: 40px; }
+.people-talent-results { margin: 0 0 20px; }
+.people-talent-results > h3, .people-search-section > h3 { font-size: 17px; margin: 12px 0; font-weight: 600; }
+.people-result-heading { color: #365c40; font-size: 14px; font-weight: 600; padding: 0 0 12px; margin-bottom: 14px; border-bottom: 1px solid #d8ddca; }
+.people-result-message { font-size: 13px; line-height: 1.75; margin: 0 0 14px; color: #4d6547; }
+.people-joined-label { color: #2d714f; font-size: 14px; }
+.people-search-section { margin-top: 22px; padding-top: 10px; border-top: 1px solid #dce3ce; }
+.people-card[data-status="retired"] .portrait { opacity: .7; }
+.people-fold { border-top: 1px solid #dce3ce; padding: 12px 0; margin: 10px 0; }
+.people-fold > summary { cursor: pointer; color: #697e56; font-size: 12px; line-height: 1.8; padding: 2px 0; }
+.people-fold > summary:hover { color: #35573c; }
+.people-fold > summary:focus-visible { outline: 2px solid #8aa36d; outline-offset: 4px; border-radius: 2px; }
+.people-fold[open] > summary { margin-bottom: 13px; }
+.people-fold .dialog-toolbar { padding: 0; justify-content: flex-start; gap: 18px; }
+.people-inline-fold { border: 0; padding: 0; margin: 0; }
+.people-inline-fold .dialog-tabs { flex-wrap: wrap; }
+.people-fold .officer-stats { grid-template-columns: repeat(5, minmax(0, 1fr)); border: 0; padding: 0 0 14px; margin: 0; }
+.people-fold .officer-stats span { font-size: 11px; }
+.people-fold .officer-stats strong { font-size: 22px; margin-top: 5px; }
+.people-fold .detail-facts { display: flex; flex-wrap: wrap; gap: 7px; }
+.people-rule { font-size: 12px; line-height: 1.85; color: #819072; margin: 12px 0 0; }
+.people-rule + button { margin-top: 14px; }
+.people-profile.officer-detail { grid-template-columns: 128px minmax(0, 1fr); align-items: center; gap: 24px; margin-bottom: 22px; }
+.people-profile.officer-detail > .portrait { width: 128px; height: 154px; border: 0; }
+.people-profile h3 { font-size: 30px; margin: 7px 0; }
+.people-profile-meta { color: #899571; font-size: 11px; }
+.people-profile .people-profile-status { font-size: 13px; color: #60734e; margin: 8px 0; }
+.people-profile p { font-size: 12px; }
+.people-fold .service-reserve { margin: 0; padding: 0; border: 0; background: none; }
+.people-fold .service-reserve small { display: block; margin-top: 10px; line-height: 1.8; }
+.people-search { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 18px; }
+.people-search > p { flex-basis: 100%; font-size: 12px; margin: 0; color: #7c8e69; }
+.people-search .field-label { flex: 1; min-width: 230px; }
+.people-search select { flex: 1; min-width: 0; }
+.people-project { border-left: 3px solid #91a772; padding: 12px 16px; margin: 20px 0; background: #eff3e4; }
+.people-project > strong { font-size: 13px; font-weight: 500; color: #60764f; }
+.people-project > p { color: #7c8e69; font-size: 12px; line-height: 1.8; margin: 7px 0; }
+.people-project .people-fold { border: 0; margin: 0; padding: 2px 0; }
+.people-prisoner.prisoner-row { grid-template-columns: 62px minmax(0, 1fr) auto; gap: 16px; padding: 16px; align-items: start; }
+.people-prisoner .portrait { width: 62px; height: 75px; border-radius: 4px; }
+.people-prisoner h3 { font-size: 23px; margin-bottom: 5px; }
+.people-prisoner p { font-size: 11px; }
+.people-prisoner small { display: block; font-size: 11px; margin-top: 4px; }
+.people-prisoner .prisoner-actions { min-width: 180px; gap: 5px; }
+.people-envoy-label.field-label { display: grid; gap: 7px; margin-top: 14px; font-size: 12px; }
+.people-envoy-label select { width: 100%; min-width: 0; }
+.people-envoy-preview { display: flex; align-items: center; gap: 10px; min-height: 55px; margin-top: 10px; }
+.people-prisoner .people-envoy-preview .portrait { width: 44px; height: 53px; flex: 0 0 44px; }
+.people-envoy-preview strong { font-size: 13px; }
+.people-envoy-preview > span { font-size: 12px; line-height: 1.7; color: #52674a; }
+.people-prison-status { color: #7c7258; line-height: 1.7; }
+.people-prison-result { padding: 14px 16px; border-left: 3px solid #6f8d56; background: #eef3e5; color: #35573c; font-size: 14px; line-height: 1.8; }
+.people-prison-options { margin: 0; border: 0; padding: 0; }
+.people-prison-options > summary { text-align: center; font-size: 11px; }
+.people-prison-options[open] > summary { margin-bottom: 8px; }
+.people-prison-options button { width: 100%; display: block; margin-top: 6px; }
+@media (max-width: 680px) {
+  .people-list.officer-grid { grid-template-columns: 1fr; }
+  button.people-card { min-height: 84px; grid-template-columns: 64px minmax(0, 1fr) auto; gap: 12px; }
+  .people-card .portrait { width: 64px; height: 77px; }
+  .people-card-copy strong { font-size: 20px; }
+  .people-profile.officer-detail { grid-template-columns: 90px minmax(0, 1fr); gap: 16px; }
+  .people-profile.officer-detail > .portrait { width: 90px; height: 108px; }
+  .people-profile h3 { font-size: 26px; }
+  .people-prisoner.prisoner-row { grid-template-columns: 50px minmax(0, 1fr); gap: 12px; }
+  .people-prisoner .portrait { width: 50px; height: 60px; }
+  .people-prisoner .prisoner-actions { grid-column: 1 / -1; flex-direction: row; align-items: start; gap: 16px; justify-content: flex-start; }
+  .people-prisoner .prisoner-actions > .primary-button { flex: 1; }
+  .people-prison-options { min-width: 110px; }
+  .people-search .field-label { flex-basis: 100%; min-width: 0; }
+  .people-search > button { width: 100%; }
+  .people-talent-profile { grid-template-columns: 76px minmax(0, 1fr); gap: 14px; }
+  .people-talent-profile > .portrait { width: 76px; height: 91px; }
+  .people-talent-profile h3 { font-size: 25px; }
+  .people-talent-actions { flex-wrap: wrap; }
+}
